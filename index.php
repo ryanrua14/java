@@ -14,7 +14,6 @@
     
     <!--Stylesheets-->
     <link rel="stylesheet" href="./stylesheets/styles.css" type="text/css">
-    
     </head>
     <body>
         <div class="container">
@@ -22,9 +21,9 @@
                 <div class="form-group">
                     <input type="text" class="form-control" name="task" placeholder="Enter Task">
                 </div>
-                <input type="submit" value="submit" class="btn btn-primary">
+                <input type="submit" value="Submit" class="btn btn-primary">
             </form>
-            <?php callData() ?>
+            <?php callData(); ?>
         </div>
     </body>
 </html>

@@ -26,7 +26,7 @@ Used in file(s) index.php Ln 21
     //Insert data into database table, table structure in db.php file ln 56
     $sql = "INSERT INTO tasks (title, isComplete) VALUES ('$task', '$complete')";
     if($conn->query($sql) === TRUE){
-        echo "Task added";
+        
     }else{
         echo "Error adding data " . $conn->error;
     }//End ifelse

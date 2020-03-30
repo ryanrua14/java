@@ -89,18 +89,18 @@ function callData(){
     }//End if
     
     //Select all data from database
-    $sql = "SELECT * from tasks";
+    $sql = "SELECT * FROM tasks";
     $result = $conn->query($sql);
     //Format tasks and echo to screen
         //Fetch tasks and places them in list
         if($result->num_rows > 0){
             while($tasks = $result->fetch_assoc()){
                 echo "<div class='list-group'>" . "\n";
-                echo "<class='list-group-item list-group-item-action flex-column align-items-start active'>" . "\n";
                 echo "<div class='d-flex w-100 justify-content-between'>";
-                echo "<h5 class='mb-1'>". ucfirst($tasks['title']). "</h5>" . "\n";
+                echo "<h6 class='mb-1'>". ucfirst($tasks['title']). "</h6>" . "\n";
                 echo "<small>".($tasks['date'])."</small>";
-                echo "</div></div>";
+                echo "<form action='./php/delete.php' method='post'><button type='submit' class='btn btn-danger btn-sm' name='id' value=".($tasks['id']).">X";
+                echo "</button></form></div></div>";
             }//End while
         }else{
             echo "No Tasks To Do";
